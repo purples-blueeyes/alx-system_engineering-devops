@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# The script displays the listening socket which is made up of the listening pocket and the PID and name of the program to which each socket belongs.
+
+netstat -l --program
