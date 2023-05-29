@@ -6,7 +6,6 @@ exec {'replace-1':
   before   => Exec['replace-2'],
 }
 
-exec {'replace-2:
-  provider => shell,
+exec {'replace-2: 
   command => 'sudo sed -i "s/nofile 4/nofile 40000/" /etc/security/limits.conf',
 }
