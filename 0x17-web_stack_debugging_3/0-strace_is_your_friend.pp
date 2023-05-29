@@ -2,6 +2,7 @@
 
 $file_to_edit = '/var/www/html/wp-settings.php'
 
-exec { 'replace_line':
+exec {'replace_line':
+provider => shell,
 command => "sudo sed -1 's/phpp/php/g' /var/www/html/wp-settings.php"
 }
